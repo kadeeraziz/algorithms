@@ -7,17 +7,17 @@ public class GuessNumberGame {
         System.out.print("Enter a number between 1 and 10: ");
 
         int guess = -1;
-        
+
         while(guess != number){
             guess = input.nextInt();
 
             if (guess > number){
-                System.out.println("Too high, please choose a smaller number");
+                System.out.println("Too high, please guess a smaller number");
             }
             else if (guess < number){
-                System.out.println("Too samall, please select a high number");
+                System.out.println("Too small, please guess a high number");
             } else {
-                System.out.println("You guessed it right");
+                System.out.println("You guessed it right!");
             }
         }
 
