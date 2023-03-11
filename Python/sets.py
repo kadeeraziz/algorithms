@@ -41,3 +41,14 @@ a, b = 0, 1
 for number in range(1, 101):
     fibonacci.add(a)
     a, b = b, a + b
+
+
+# 7. Create a set of the first 100 prime numbers
+primes = set()
+for number in range(1, 101):
+    if number > 1:
+        for i in range(2, number):
+            if (number % i) == 0:
+                break
+        else:
+            primes.add(number)
