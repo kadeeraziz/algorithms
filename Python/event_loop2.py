@@ -25,12 +25,12 @@ def main():
 
 async def main2():
     start_time = time.time()
-    for i in range(20):
-        res = await get_catfact_asy()
-        print(f'{i}  -  {res}')
+    results = await asyncio.gather(*[get_catfact_asy() for i in range(20)])
+    for result in results:
+        print(result)
     end_time = time.time()
     print(f"Time taken for.: {end_time - start_time}")
 
 if __name__ == "__main__":
     asyncio.run(main2())
-    main()
+    #main()
